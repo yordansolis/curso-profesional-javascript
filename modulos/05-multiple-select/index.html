@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+</head>
+<style> 
+#miLista{
+    background-color: aqua;
+}
+#miLista >li {
+   border:  1px solid  black;
+}
+#miLista >li:hover {
+ background-color: brown;
+}
+</style>
+<body>    
+      <ul id="miLista">
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 6</li>
+      </ul>
+
+      <script>
+      // Obtener todos los elementos <li> dentro de la list
+     const dectectorElementosLi = document.getElementById('miLista').getElementsByTagName('li');
+           
+     /** Para poder dectar el click tenemos que recorrer la lista de elementos */
+            for (let i = 0; i < dectectorElementosLi.length; i++) {
+             const elementoSelecionado = dectectorElementosLi[i];
+          
+                
+             // añadirle estilos desde js
+            //  elementoSelecionado.setAttribute('class', 'listas')
+            
+
+                // detectar a que se le dio click de la lista de elementos
+                elementoSelecionado.addEventListener('click', function() {
+                    console.log(elementoSelecionado.textContent);
+                    // elementoSelecionado.classList.remove('listas');
+
+                    // elementoSelecionado.classList.add('seleccionado');
+            });
+
+
+            }
+
+      </script>
+</body>
+</html>

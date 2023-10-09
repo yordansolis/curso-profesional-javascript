@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de Modificación de Atributos del DOM</title>
+</head>
+<body>
+  <a id="myLink" href="https://www.example.com">Enlace a Ejemplo</a>
+  <button id="changeLink">Cambiar Enlace</button>
+  <script>
+    // Obtener elementos por su ID
+const link = document.getElementById('myLink');
+const button = document.getElementById('changeLink');
+
+// Agregar evento de clic al botón
+button.addEventListener('click', () => {
+  // Cambiar el atributo href del enlace
+  link.setAttribute('href', 'https://www.openai.com');
+});
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+
+<button id="myBtn">Hola mundo</button>
+
+<p id="demo"></p>
+
+
+
+
+<script>
+    ///     const d = getElementById("myBtn");
+    const d = document;
+   const $btn = d.getElementById("myBtn");
+   console.log($btn);
+
+   
+   function displayDate() {
+     document.getElementById("demo").innerHTML = Date();
+   }
+
+
+    d.addEventListener("click", (e)=>{
+        if (e.target == ($btn)) {
+            console.log(e);            
+            displayDate();
+        }
+    });
+
+
+    
+</script>

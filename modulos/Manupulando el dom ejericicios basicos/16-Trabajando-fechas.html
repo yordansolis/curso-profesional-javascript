@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+notas:
+El setFullYear()método puede configurar opcionalmente el mes y el día:
+d.setFullYear(2020);
+
+
+El setFullYear()método establece el año de un objeto de fecha. En este ejemplo a 2020:
+someday.setFullYear(2020, 11, 3);
+
+
+
+<p id="demo"></p>
+
+<script>
+let text;
+const today = new Date();
+const someday = new Date();
+someday.setFullYear(2100, 0, 14);
+
+if (someday > today) {
+  text = "Today is before January 14, 2100.";
+} else {
+  text = "Today is after January 14, 2100.";
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>

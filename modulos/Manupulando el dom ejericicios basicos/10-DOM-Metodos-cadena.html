@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The pop() Method</h2>
+
+<p>The pop() method el ultimo.</p>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruits;
+fruits.pop();
+document.getElementById("demo2").innerHTML = fruits;
+</script>
+
+<hr>
+
+<p>
+    El push()método agrega un nuevo elemento a una matriz (al final):
+</p> 
+
+
+ <p id="demo3"></p>
+<p id="demo4"></p>
+
+<script>
+    const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo3").innerHTML = fruits1;
+    fruits1.push("Kiwi");
+    document.getElementById("demo4").innerHTML = fruits1;
+    </script>
+
+    <hr>
+    <p>
+        El shift()método elimina el primer elemento de la matriz y "cambia" todos los demás elementos a un índice más bajo.
+
+    </p>
+    <p id="demon5"></p>
+    <p id="demon6"></p>
+
+    <script>
+        const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demon5").innerHTML = fruits4;
+        fruits4.shift();
+        document.getElementById("demon6").innerHTML = fruits4;
+        </script>
+
+        <hr>
+        <p>Ordenar una lista alfabeticamente</p>
+
+ <p id="demont"></p>
+<p id="demonp"></p>
+
+<script>
+const listass = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demont").innerHTML = listass;
+
+listass.sort();
+document.getElementById("demonp").innerHTML = listass;
+</script>
+
+</body>
+</html>

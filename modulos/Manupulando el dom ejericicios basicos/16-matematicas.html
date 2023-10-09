@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <p>
+        Matemáticas.min() y Matemáticas.max()
+    Math.min()y Math.max()se puede usar para encontrar el valor más bajo o más alto en una lista de argumentos:
+    </p>
+
+
+    
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+Math.min(0, 150, 30, 20, -8, -200);
+</script>
+
+</body>
+</html>
+    <hr>
+<p>     
+    Matemáticas.aleatoria()
+    Math.random()devuelve un número aleatorio entre 0 (inclusive) y 1 (exclusivo):
+</p>
+<p id="demo1"></p>
+
+<p>Tip: Click on "Run" several times.</p>
+
+<script>
+document.getElementById("demo1").innerHTML = Math.random();
+</script>
+
+
+
+<hr>
+
+
+<p> Math.random()used with Math.floor()puede usarse para devolver enteros aleatorios.</p>
+<p id="demo2"></p>
+
+<script>
+document.getElementById("demo2").innerHTML =
+Math.floor(Math.random() * 10);
+</script>
+
+<hr> 
+<br>
+
+
+
+<h2>JavaScript Math.random()</h2>
+
+<p>    Esta función de JavaScript siempre devuelve un número aleatorio entre min (incluido) y max (excluido):
+</p>
+
+<button onclick="document.getElementById('d').innerHTML = getRndInteger(0,10)">Click Me</button>
+
+<p id="d"></p>
+
+<script>
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+</script>
+
+
+
+
+
+</body>
+</html>

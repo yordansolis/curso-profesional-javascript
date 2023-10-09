@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Probando el manejo de cadenas</h2>
+<p>JavaScript objects cannot be compared.</p>
+
+<p id="demo"></p>
+
+<script>
+let x = new String("John");  // x is an object
+let y = new String("John");  // y is an object
+document.getElementById("demo").innerHTML = (x===y);
+
+let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let length = text.length;
+
+console.log(length);
+
+
+</script>
+<hr>
+<p>The position of the first occurrence of "locate" is:</p>
+
+<h2> Buscando cadenas </h2>
+<p id="demin"></p>
+<script>
+
+
+
+let text2 = "Hola donde esta canchito feliz!";
+let index = text2.indexOf("canchito");
+document.getElementById("demin").innerHTML = index; 
+</script>
+
+
+<script>
+let firstName = "John";
+let lastName = "Doe";
+
+let datos = `Welcome ${firstName}, ${lastName}!`;
+console.log(datos);
+</script>
+
+
+
+<hr>
+
+<p id="operacion"></p>
+
+<p>Asi se puede operar con cadenas </p>
+
+<script>
+let price = 10;
+let VAT = 0.25;
+let total = `Total: ${(price * (VAT)) }`;
+
+document.getElementById("operacion").innerHTML = total;
+</script>
+<script>
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        html{
+            font-family: sans-serif;
+        }
+
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+
+        main{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .loader{
+            display: none;
+            margin: auto;
+        }
+
+        @media screen and (min-width: 800px){
+            main{
+                flex-direction: row;
+            }
+            main > * {
+                padding: 1rem;
+                flex-basis:50%;
+            }
+        }
+            
+    </style>
+</head>
+<body>
+    <h1>Buscador de Canciones</h1>
+    <form id="song-search">
+        <input 
+        type="text"
+        name="artist"
+        placeholder="Nombre del Intérprete" required
+        >
+        <br>
+
+        <input 
+        type="text"
+        name="song"
+        placeholder="Nombre del la Canción" required
+        >
+        <br>
+        <input type="submit">
+    </form>
+
+        <img class="loader" src="assets/my-loader.svg" alt="Cargando...">
+
+        <aside class="error"></aside>
+
+        <main>
+            <article class="artist"></article>
+            <article class="song"></article>
+        </main>
+
+        <script>
+            const d = document,
+            $form  = d.getElementById('song-search'),
+            $loader = d.querySelector('.loader'),
+            $error= d.querySelector('.error'),
+            $main = d.querySelector('main'),
+            $arist = d.querySelector('.artist'),
+            $song = d.querySelector('.song');
+
+
+            $form.addEventListener('submit', async e => {
+                e.preventDefault();
+
+
+                try {
+
+                    $loader.style.display ='block';
+
+                        /*obtenemos los valores */
+                    let artist = e.target.artist.value.toLowerCase(); // lo que el usuario escribe
+                    let song = e.target.song.value.toLowerCase(); // del formulario
+          
+                    // console.log("->",artist); estos son eventos del  formulario y value 
+                    // es el valor de main
+
+                    let $aristTemplate = '';
+                    let songTemplate = '';
+
+                    let artisApi = `https://theaudiodb.com/api/v1/json/2/search.php?s=${artist}`,
+                        songApi =`https://private-anon-97cdeacbc5-lyricsovh.apiary-mock.com/v1/${artist}/${song}`;
+
+                    let   artisFetch = fetch(artisApi);
+                    let   songFetch = fetch(songApi);
+                        
+                 
+
+                  //destructuración  priper se hace la petición 1.aristRes  segundo  2..sounRes
+                    let [aristRes, sounRes] = await Promise.all([artisFetch, songFetch]);
+                    console.log(aristRes, sounRes);
+
+
+                     let artisData = await aristRes.json(); //1
+                     let songData = await sounRes.json();  //2
+
+                        log
+
+
+
+                    //if (!res.ok) throw { status: res.status, statusText: res.statusText }
+
+                    
+                } catch (error) {
+                    let message = error.statusText || 'Ocurrio un error';
+                    $error.innerHTML = `<p>Error: ${error.status}: ${message}</p>`;
+                    
+                    $loader.style.display = 'none';
+                }
+            
+
+             });
+
+        </script>
+    
+</body>
+</html>

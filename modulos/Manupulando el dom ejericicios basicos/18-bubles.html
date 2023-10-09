@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    
+    <h2>Bucles JavaScript</h2> 
+    <p>Los bucles son útiles si desea ejecutar el mismo código una y otra vez, cada vez con un valor diferente.</p>
+
+    <p id="demo"></p>
+
+    <script>
+    const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+    
+    let text = "";
+    for (let i = 0; i < cars.length; i++) {
+      text += cars[i] + "<br>";
+    }
+    
+    document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>

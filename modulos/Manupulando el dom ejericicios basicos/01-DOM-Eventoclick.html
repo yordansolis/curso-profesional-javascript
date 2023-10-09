@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <h1> Script</h1>
+
+    <p>Primeros pasos en JavaScript</p>
+
+    <button id="btn1" value="1"> BOTON 1</button>
+    <br><br>
+    <button id="btn2" value="2">BOTON 2</button>
+
+
+    <hr>  
+
+    <p id="texto" value></p>
+    <button  id="agregar_parrafo"> Agregar texto</button>
+
+    <script>
+
+       const  btn1 = document.getElementById("btn1");
+
+       btn1.addEventListener("click", funcionSaludar);
+    
+
+       function funcionSaludar() { 
+        console.log("Hola este es el Primer Btn");
+        console.log(btn1.value);
+       }    
+
+
+
+
+       const  btn2 = document.getElementById("btn2");
+
+       btn2.addEventListener("click", funcionSluda2);
+
+       function funcionSluda2() { 
+        console.log("Hola este es el segundo   Btn");
+        console.log(btn2.value);
+       }    
+
+       const  text = document.getElementById("agregar_parrafo");
+        
+       text.addEventListener("click", agregarPalabras);
+
+       function agregarPalabras() {
+           
+           let set = document.getElementById("texto");
+
+           set.innerHTML = "Tutoriales JavaScript";
+          
+          
+           setTimeout(() => {
+            set.innerHTML = "";
+            }, 3000);
+                
+       
+       }
+  
+
+
+
+
+
+
+
+   
+
+
+ 
+
+
+    </script>
+</body>
+</html>

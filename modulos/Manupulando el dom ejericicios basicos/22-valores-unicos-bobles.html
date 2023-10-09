@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <h1>
+        Un conjunto de JavaScript es una colección de valores únicos.
+Cada valor solo puede ocurrir una vez en un Conjunto.
+    </h1>
+    
+    <p id="demo"></p>
+
+<script>
+// Create a Set
+const letters = new Set(["a","b","c"]);
+
+// List all Elements
+let text = "";
+letters.forEach (function(value) {
+  text += value + "<br>";
+})
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>

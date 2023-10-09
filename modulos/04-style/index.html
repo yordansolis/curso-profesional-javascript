@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM CSS en JavaScript</title>
+</head>
+<body>
+  <div id="myDiv" style="width: 100px; height: 100px; background-color: rgb(171, 23, 107); border: 1px solid black;">Este es un div</div>
+  <button id="changeStyle">Cambiar Estilo</button>
+  
+  <script>
+// Obtener elementos por su ID
+const div = document.getElementById('myDiv');
+const button = document.getElementById('changeStyle');
+
+// Agregar evento de clic al botón
+button.addEventListener('click', () => {
+  // Cambiar el estilo directamente utilizando la propiedad style
+  div.style.backgroundColor = 'lightgreen';
+  div.style.borderColor = 'darkgreen';
+});
+
+
+  </script>
+</body>
+</html>

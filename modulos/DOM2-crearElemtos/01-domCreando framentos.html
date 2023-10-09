@@ -1,0 +1,40 @@
+<body>
+    <input type="button" value="Change this document." onclick="change()">
+    <h2>Primer elemento padre </h2>
+
+
+    <p>Elemento padre:</p>
+    <hr>
+    <p> noo selecionado</p>
+   
+</body>
+
+<script>
+      function change() {
+          /*firstChild , pfirstChild es una propiedad utilizada en programación
+           para acceder al primer hijo de un nodo en un árbol de nodosS*/
+
+           /*
+           firstChild permite acceder al primer hijo de un nodo en particular.
+           */
+
+       //seleciona el primer h2 
+    var header = document.getElementsByTagName("H2").item(0);
+    header.firstChild.data = " - Acedo al hijo y le cambio el dato  - ";
+
+    var para = document.getElementsByTagName("P").item(0);
+    para.firstChild.data = " elemento hijo del  párrafo 2";
+
+
+    var newText = document.createTextNode("Creando nuevo nodo de texto.");
+
+        //CREAMOS UN FRATMENTO
+    var newElement = document.createElement("P");
+   
+    //ApppendChild lo agrega al final 
+    newElement.appendChild(newText);
+
+    para.parentNode.appendChild(newElement);
+  }
+
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    </head>
+
+    <body>
+        <p> "async y await hacen que las promesas sean más fáciles de escribir" async hace que una función devuelva una
+            promesa await hace que una función espere una Promesa Sintaxis asíncrona La palabra clave asyncantes de una
+            función hace que la función devuelva una promesa: </p>
+     
+            <p id="demo"></p>
+
+        <script>
+            
+            function myDisplayer(some) {
+                document.getElementById("demo").innerHTML = some;
+            }
+
+            async function myFunction() {
+                return "Hello";
+            }
+
+            myFunction().then(
+                function (value) {
+                    myDisplayer(value);
+                },
+                function (error) {
+                    myDisplayer(error);
+                }
+            );
+            
+            </script>
+
+
+
+</body>
+</html>

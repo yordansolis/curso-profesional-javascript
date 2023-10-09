@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Dates</h1>
+<h2>Using new Date()</h2>
+<p>mar 16 may 2023 18:20:21 GMT-0500 (hora estándar de Colombia):</p>
+
+<p id="demo"></p>
+
+<script>
+const d = new Date();
+document.getElementById("demo").innerHTML = d;
+</script>
+
+
+<hr>
+<p>
+    <h2> Para crear fechas: </h2>
+    new Date()   crea un objeto de fecha con la fecha y hora actual :
+
+
+<script> 
+
+new Date()
+
+new Date(year,month)
+new Date(year,month,day)
+new Date(year,month,day,hours)
+new Date(year,month,day,hours,minutes)
+new Date(year,month,day,hours,minutes,seconds)
+new Date(year,month,day,hours,minutes,seconds,ms)
+new Date(milliseconds)
+</script>
+
+
+</p>
+<hr> 
+
+formato de fecha 
+
+
+<h2>JavaScript ISO Dates</h2>
+
+<p id="demo3"></p>
+
+<script>
+const p = new Date("2015-03-25");
+document.getElementById("demo3").innerHTML = p;
+</script>
+</body>
+</html>

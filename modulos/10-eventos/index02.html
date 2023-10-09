@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Page Load Events</title>
+</head>
+
+<body>
+
+
+    <script>
+        addEventListener('DOMContentLoaded', (event) => {
+            console.log('The DOM is fully loaded.');// el don esta completamente cargado
+        });
+
+        addEventListener('load', (event) => {
+            console.log('The page is fully loaded.');// la pagina cargoo correctamente ! 
+        });
+
+        addEventListener('beforeunload', (event) => {
+            // mostrar el cuadro de diálogo de confirmación
+            event.preventDefault();
+            //  Google Chrome requires returnValue to be set.
+            event.returnValue = '';
+        });
+
+        addEventListener('unload', (event) => {
+            // enviar datos analíticos
+        });
+    </script>
+</body>
+</html>

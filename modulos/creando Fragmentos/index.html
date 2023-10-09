@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de Manipulación del DOM</title>
+</head>
+<body>
+  <p id="miParrafo">Texto inicial del párrafo.</p>
+  <button title="button" id="miBoton">Clic aquí</button>
+  <ul id="miLista">
+    <li>Elemento 1</li>
+  </ul>
+  <script >
+    // Obtener elementos por su ID
+const parrafo = document.getElementById("miParrafo");
+const boton = document.getElementById("miBoton");
+const lista = document.getElementById("miLista");
+
+// Agregar evento de clic al botón
+boton.addEventListener("click", () => {
+  // Cambiar el texto del párrafo
+  parrafo.textContent = "¡Texto cambiado con JavaScript!";
+
+  // Crear un nuevo elemento de lista y agregarlo a la lista existente
+  const nuevoElemento = document.createElement("li");
+  nuevoElemento.textContent = "Nuevo elemento de lista";
+  lista.appendChild(nuevoElemento);
+});
+
+  </script>
+</body>
+</html>

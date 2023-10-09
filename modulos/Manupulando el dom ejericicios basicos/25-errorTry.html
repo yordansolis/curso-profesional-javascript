@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <p> La finallydeclaración le permite ejecutar código, después de intentar y capturar, independientemente del resultado: </p>
+    
+
+
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()">Test Input</button>
+<p id="p01"></p>
+
+<script>
+function myFunction() {
+  const message = document.getElementById("p01");
+  message.innerHTML = "";
+  let x = document.getElementById("demo").value;
+  try { 
+    if(x.trim() == "")  throw "es vacio";
+
+    if(isNaN(x)) throw "no es un numero";
+
+    x = Number(x);
+
+    if(x > 10)   throw "es mayor a 10";
+    if(x < 5)  throw "meno a 10";
+  }
+  catch(err) {
+    message.innerHTML = "Input " + err;
+  }
+  finally {
+    document.getElementById("demo").value = "";
+  }
+}
+</script>
+
+
+
+<br><br><br><br><br>
+<p>
+    throw se utiliza para lanzar (o arrojar) una excepción. Permite generar una excepción en un 
+    bloque de código y controlarla en un bloque try...catch correspondiente o permitir
+     que se propague hacia arriba en la pila de llamadas hasta que se maneje en un nivel superior.
+</p>
+
+
+</body>
+</html>

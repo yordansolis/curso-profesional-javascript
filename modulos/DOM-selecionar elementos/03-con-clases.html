@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+
+    <div class="card">
+        <h1>Mis cards </h1>
+        <header>
+            <p> Este es el header</p>
+        </header>
+        <h2> Titulo 2</h2>
+    </div>
+
+    <div class="card">
+        <h1>Mis cards </h1>
+        <header>
+            <p> Este es el header</p>
+        </header>
+        <h2> Titulo 2</h2>
+    </div>
+
+    <div class="card">
+        <h1>Mis cards </h1>
+        <header>
+            <p> Este es el header</p>
+        </header>
+        <h2> Titulo 2</h2>
+    </div>
+
+
+
+
+
+
+
+      <input type="color" name="color" id="">  
+
+   
+    
+    <script>
+        const elementos= document.getElementsByClassName("card");
+        console.log(elementos);
+
+
+        /********** Ahora con array **************/
+            /**** Nota importante esto se hace cuando se necesita convertir en un arreglo
+             * o usar las propiedades de mat*****/
+        const elemens= [...document.getElementsByClassName("card")]
+        console.log(elemens);
+
+        /******* ***********/
+
+        const color = document.getElementsByName("color");
+        console.log(color);
+
+
+    </script>
+</body>
+</html>

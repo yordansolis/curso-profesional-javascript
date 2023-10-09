@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="to-do-app">
+           <h2>To-do App</h2>
+           <input type="text" id="item" placeholder="Enter item...">
+           <br>
+           <br>
+           <button onclick="add()">Add Item <i class="fa-solid fa-plus"></i></button>
+           <button onclick="del()">Clear all <i class="fa-solid fa-ban"></i></button>
+        </div>
+        <ul class="to-do-list"></ul><!--to-do items go here-->
+     </div>
+
+
+
+     <script>
+        const ul = document.querySelector('ul');
+    const input = document.getElementById('item');
+
+
+    let itemsArray = JSON.parse(localStorage.getItem('items'));
+            console.log(itemsArray);
+
+    if (itemsArray) {
+        itemsArray =   JSON.parse(localStorage.getItem('items'))
+    }else{
+        itemsArray = []
+    }
+
+    itemsArray.forEach(addTask);
+
+        function addTask(text){
+        
+            const li = document.createElement('li');            
+            li.textContent = text;
+            ul.appendChild(li);
+        }
+
+
+        function add(){
+
+            itemsArray.push(input.value); // add list the array
+
+            localStorage.setItem('items', JSON.stringify(itemsArray)); //optiene 
+        
+            addTask(input.value);
+            input.value = '';
+
+        }
+        function del(){
+
+        localStorage.clear();
+        ul.innerHTML = '';
+        itemsArray = [];
+
+        }
+
+
+     </script>
+    
+</body>
+</html>

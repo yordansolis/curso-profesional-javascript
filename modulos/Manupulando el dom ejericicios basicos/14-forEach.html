@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The forEach() Method</h2>
+
+<p>Uno de los metodos mas utilizados para recorrer matriz</p>
+
+<tbody id="frutas">
+  <tr>
+    <th>#1</th>
+    <td>pera</td>
+    <td>$200</td>
+   </tr><br>
+   <tr>
+    <th>#2</th>
+    <td>carambolo</td>
+    <td>$200</td>
+   </tr><br>
+   <tr>
+    <th>#3</th>
+    <td>aguacate</td>
+    <td>$3000</td>
+   </tr>
+</tbody>
+
+
+ <p id="demo"></p> 
+<script>
+const numbers = [45, 4, 9, 16, 25];
+const $frutas = document.getElementById('frutas');
+console.log($frutas);
+//$frutas.forEach(frutas => console.log(frutas));
+
+
+const palabras = ["pepe", "lola", "nano"];
+
+palabras.forEach(valorPalara => {
+  console.log(valorPalara)
+})
+
+let txt = "";
+numbers.forEach(myFunction);
+
+document.getElementById("demo").innerHTML = txt;
+
+function myFunction(value, index, array) {
+  txt += value + "<br>"; 
+}
+</script>
+
+</body>
+</html>

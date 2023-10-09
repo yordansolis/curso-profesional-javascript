@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myDiv1 {
+  background-color: coral;
+  padding: 50px;
+  width: 200px;
+}
+
+#myDiv2 {
+  background-color: rgb(175, 40, 40); 
+  font-size: 20px;
+  border: 1px solid;
+  width: 200px;
+  padding: 15px;
+}
+</style>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+</head>
+<body>
+
+<h2>Eventos del click</h2>
+
+<div id="myDiv1">
+  <h2>Bubbling:</h2>
+ </div>
+ <br><br><br>
+<div id="myDiv2">
+  <h2>Capturing:</h2>
+</div>
+
+<script>
+
+//t $div1 = document.getElementById("myDiv1"), $div2 = ocument.getElementById("myDiv2");
+
+const $div1 = document.getElementById("myDiv1");
+const $div2 = document.getElementById("myDiv2");
+
+
+$div1.addEventListener("click", function() {
+  alert("You clicked the orange element!");
+}, 
+
+);
+
+
+$div2.addEventListener("click", function() {
+  alert("You clicked the orange element!");
+}, 
+
+);
+
+</script>
+
+</body>
+</html>

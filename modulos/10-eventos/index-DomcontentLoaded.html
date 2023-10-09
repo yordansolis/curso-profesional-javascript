@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS DOMContentLoaded Event</title>
+</head>
+<body>
+    <button id="btn">Click Me!</button>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+
+                /// aqui puedo tener varios eventos
+            let btn = document.getElementById('btn');
+
+
+
+            btn.addEventListener('click', () => {
+                // handle the click event
+                console.log('clicked');
+            });
+
+
+        });
+    </script>
+</body>
+</html>

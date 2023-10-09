@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <p> 
+    Sintaxis de espera
+La awaitp alabra clave solo se puede usar dentro de una asyncfunción.
+
+La await  hace que la función pause
+ la ejecución y espere una promesa resuelta antes de continuar:
+</p>
+    
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript async / await</h2>
+las parabras 
+resolve, reject esta definidas por js 
+<hr> 
+<h1 id="demo"></h1>
+
+<script>
+
+async function myDisplay() {
+
+  let myPromise = new Promise(function(resolve, reject) {
+    resolve("I love You !!");
+  });
+
+  document.getElementById("demo").innerHTML = await myPromise;
+}
+
+myDisplay();
+</script>
+
+</body>
+</html>
+
+</body>
+</html>

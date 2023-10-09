@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de  DOM</title>
+</head>
+<style>
+ .box {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid black;
+}
+.box.changed {
+  background-color: lightgreen;
+  border-color: darkgreen;
+}
+
+
+</style>
+<body>
+
+  <div id="myDiv" class="box">Este es un div</div>
+  <button id="changeStyle">Cambiar Estilo</button>
+  <script>
+    // Obtener elementos por su ID
+const div = document.getElementById('myDiv');
+const button = document.getElementById('changeStyle');
+
+// Agregar evento de clic al botón
+button.addEventListener('click', () => {
+  // Agregar o quitar una clase para cambiar el estilo
+  div.classList.toggle('changed');
+});
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <p>La breakdeclaración también se puede utilizar para saltar fuera de un bucle:    </p>
+    
+<p id="demo"></p>
+
+<script>
+let text = "";
+for (let i = 0; i < 10; i++) {
+  if (i === 3) { break; }
+  text += "The number is " + i + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
+<hr> 
+<br><br><br>
+<p>
+    Este ejemplo omite el valor de 3:
+    La continueinstrucción interrumpe una iteración (en el bucle), si se produce una condición específica, y continúa con la siguiente iteración del bucle.
+</p>
+
+<p id="demo2"></p>
+
+<script>
+let text1 = "";
+for (let i = 0; i < 10; i++) {
+  if (i === 3) { continue; }
+  text1 += "The number is " + i + "<br>";
+}
+document.getElementById("demo2").innerHTML = text1;
+</script>
+
+
+
+</body>
+</html>

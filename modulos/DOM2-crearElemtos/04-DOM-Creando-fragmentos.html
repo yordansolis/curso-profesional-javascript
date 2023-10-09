@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM Remplazando y creando fragmentos</h2>
+
+
+<div id="div-selec">
+<p id="triste">Chanchito  triste :( .</p>
+</div>
+
+<script> 
+
+const $selct_div = document.getElementById("div-selec");
+let $triste = document.getElementById("triste");
+
+const  $crearFramento = document.createElement("p");
+/*appendChild para agregar un nuevo 
+nodo como último hijo de otro nodo existente*/
+const $crearText = document.createTextNode("Chanchito Feliz :). !!");
+$crearFramento.appendChild($crearText);
+
+setTimeout(() => {
+    $selct_div.replaceChild($crearFramento, $triste);
+}, 3000);
+
+
+
+
+</script>
+
+</body>
+</html>

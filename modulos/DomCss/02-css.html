@@ -1,0 +1,71 @@
+
+
+</script>
+</html>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+</head>
+<style>
+.rojo{
+    background-color: red;
+}
+.verde{
+    background-color: rgb(48, 90, 65);
+   
+}
+
+.black{
+    background-color: black;
+    color: white;
+}
+.black-eli{
+    background-color: black;
+    color: white;
+}
+</style>
+<body>
+    <div class="rojo">
+        <p> Hola mundo en rojo</p>
+    </div>
+    <div class="verde">
+        <p> Hola mundo en verder</p>
+    </div>
+
+    <div id="sin-clase" class="">
+        <p> Hola mundo en verder</p>
+    </div>
+
+    <div id="rem-clase" class="black-eli">
+        <p> Hola mundo en verder</p>
+    </div>
+
+
+
+    <script>
+
+
+let  miElto = document.getElementsByClassName("rojo")[0];
+//console.log(miElto);
+
+miElto.className = "black";
+
+const agregar = document.getElementById("sin-clase")
+console.log(agregar);
+agregar.classList.add("color-blue")
+
+
+const eliminar = document.getElementsByClassName("black-eli")[0];
+console.log(eliminar); 
+
+eliminar.classList.remove("black-eli")
+
+    </script>
+
+    
+</body>
+</html>

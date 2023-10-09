@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo DOMContentLoaded</title>
+</head>
+<body>
+    <p><!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo DOMContentLoaded</title>
+</head>
+<body>
+    <p>Ejemplo 1: Vinculación de eventos después de que se carga el DOM.</p>
+    <button id="miBoton">Haz clic</button>
+
+    <script>
+        // Espera a que se cargue el DOM
+        document.addEventListener('DOMContentLoaded', function() {
+            // Vincula un evento click al botón
+            const boton = document.getElementById('miBoton');
+            boton.addEventListener('click', function() {
+                alert('¡Haz hecho clic en el botón!');
+            });
+        });
+    </script>
+</body>
+</html>
+</p>
+    <button id="miBoton">Haz clic</button>
+
+    <script>
+
+
+        // Espera a que se cargue el DOM
+        document.addEventListener('DOMContentLoaded', function() {
+
+
+            // Vincula un evento click al botón
+            const boton = document.getElementById('miBoton');
+
+            boton.addEventListener('click', function() {
+                alert('¡Haz hecho clic en el botón!');
+            });
+
+
+        });
+    </script>
+</body>
+</html>

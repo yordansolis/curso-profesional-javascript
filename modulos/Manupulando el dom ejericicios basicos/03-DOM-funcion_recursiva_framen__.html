@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM Creando fragmentos</h2>
+
+
+<div id="div-selec">
+<p id="triste">             :( .</p>
+
+</div>
+<button id="iniciar" value="5"> iniciar</button>
+
+<script>
+
+
+let $iniciar = document.getElementById("iniciar");
+
+let $triste = document.getElementById("triste");
+
+
+
+
+function functionJugar(x){
+
+if(x == 0 || x == 1 ){
+  return 1
+}
+
+
+setTimeout(() => {  
+    $triste.innerHTML ="Chanchito feliz";
+}, 3000);
+
+setTimeout(() => {  
+    let e = $triste.innerHTML ="Chanchito Triste" 
+    console.log(e);
+}, 3000);
+
+  return functionJugar(x - 1);
+}
+
+
+document.addEventListener("click", e => {
+    if (e.target == $iniciar) {
+        e.preventDefault(); 
+        const valor  = e.target.value; 
+        functionJugar(valor);
+    
+    }
+}); 
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
